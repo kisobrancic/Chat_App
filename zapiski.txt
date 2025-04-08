@@ -1,0 +1,34 @@
+Model iz slike - bo pridobil neki iz baze podatkov in naredil nekaj > danes bomo vse skupaj povezali v en model
+
+Flask-SQLAlchemy = modul oz knjižnica, ki nam omogoča bazo podatkov, oz nam vse skupaj poveže - da lahko vse skupaj poteka v obe smeri, promet je ponavadi dvosmeren tukaj 
+
+pip install -r req.txt  >> tole komando moramo vnest, da si nainštaliramo tale SQLAlchemy
+
+DELO Z BAZAMI podatkov
+
+1. moramo razumet 1 stvar - spremenljivke, seznami, slovarji, model, objekti - to vse obstaja znotraj Python datoteke. Ko naredimo bazo podatkov, e-ta živi ločeno od samega programa. 
+    To je samostojni program. Zato potrebujemo tudi drug browser, da lahko to pregledujemo. 
+    Baze podatkov so ločene in potrebujemo nek način komunikacije med njimi - rabimo vzpostavit neko pot/povezavo. Temu služi ta FLask SQLAlchemy.
+
+2. SQLAlchemy je zadolžen za to povezavo.
+
+
+vrstica 6 - sporočimo Pythonu kje se naša baza podatkov nahaja in kakos imenuje
+
+db.session.add(message)  >> dodajanje v bazo podatkov
+db.session.commit()      >> se dejansko shrani v bazo podatkov
+
+return redirect("/") >> kontroler bo preusmeril, s tem da bo naredil vse stvari vmes, ki smo mu naročil >> preusmerimo porgram na url in potem bojo podatki
+        prikazani
+
+Message.query.all  >> funkcija bo vse pobrala iz baze podatkov in bo tukaj shranjeno
+
+
+primary_key = True >> sporoči bazi podatkov, da gre za indeks -> se bo beležu indkes brez da bi rabl karkoli počet 
+
+db.create_all()  >> kreira db 
+
+> Flask datoteka z vsemi komandami 
+
+
+DN: Pejdi vrstico po vrstico v Pythonu in preberi in premisli kaj se kje dogaja :) 

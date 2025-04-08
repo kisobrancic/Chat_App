@@ -1,0 +1,40 @@
+* {
+    background-color: black;
+}
+
+body {
+    color: violet;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    color: white;
+    outline-color: pink;
+}
+
+textarea {
+    color: white;
+    outline-color: pink;
+}
+
+button {
+    color: white;
+    accent-color: pink;
+    
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+}

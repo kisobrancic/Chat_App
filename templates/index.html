@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+    
+    <h1>Chat</h1>
+
+    <form action="/send" method="post">
+        <input type="text" name="username" placeholder="Enter your username ..">
+        <br><br>
+        <textarea name="text" placeholder="Enter your message" rows="5" cols="25"></textarea>
+        <br><br>
+        <button type="submit">Send</button>
+    </form>
+
+    <br><br>
+
+    <h3>Messages</h3>
+
+    {% for message in messages %}
+    
+    <p> {{message.username}}: {{message.text}}</p>
+    
+    {% endfor %}
+
+</body>
+</html>
